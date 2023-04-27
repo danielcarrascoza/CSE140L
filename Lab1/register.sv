@@ -8,7 +8,11 @@ module register # (parameter N = 8)
     output logic [N-1:0] out
     );
 	 
-  always_ff @ (posedge clk, posedge clear)    begin
+  always_ff @ (posedge clk, posedge clear)    
+    begin
+      
+      
+
 // fill in guts
 //  if(...) out <= ... ;          // use <= nonblocking assignment!
 //  else if(...) out <= ... ;
