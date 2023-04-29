@@ -8,6 +8,16 @@ module right_shift_register #(parameter WIDTH = 16)(
 
 	
 	always @(posedge clk) begin
+
+    if (mode) begin
+      
+    end
+
+    else begin
+
+    end
+
+
 // fill in the guts	-- holds or shifts by 1 bit position
 // this is a sequential operation, requiring nonblocking (<=) assignments
 // if(...) out <= ...;
@@ -18,6 +28,7 @@ module right_shift_register #(parameter WIDTH = 16)(
 //		1       1	     load and logical right shift
 //		1		0	     load and arithmetic right shift
     end
+
 
 /* logical right shift fills in 0s from the left
   logic[3:0] a, b;
