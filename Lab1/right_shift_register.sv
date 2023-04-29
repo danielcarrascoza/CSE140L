@@ -3,7 +3,7 @@ module right_shift_register #(parameter WIDTH = 16)(
     input                    clk,
     input                    enable,
     input signed        [WIDTH-1:0] in, // input to shift
-    input        signed [WIDTH-1:0] in, // input to shift
+   
     input                    mode, // arithmetic (0) or logical (1) shift
     output logic signed [WIDTH-1:0] out); // shifted input
 
