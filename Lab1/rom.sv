@@ -32,6 +32,6 @@ module rom(
 
 // fill in the guts
 //   out = mem(addr)	   assign data = ...      always_comb data = ...
-//  data = mem(addr)	   [ ]
+  assign data = mem[addr];
 
 endmodule

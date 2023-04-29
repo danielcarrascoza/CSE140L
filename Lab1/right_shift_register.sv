@@ -3,6 +3,7 @@ module right_shift_register #(parameter WIDTH = 16)(
     input                    clk,
     input                    enable,
     input signed        [WIDTH-1:0] in, // input to shift
+    input        signed [WIDTH-1:0] in, // input to shift
     input                    mode, // arithmetic (0) or logical (1) shift
     output logic signed [WIDTH-1:0] out); // shifted input
 
@@ -19,11 +20,12 @@ module right_shift_register #(parameter WIDTH = 16)(
   end
 
 
+
 // fill in the guts	-- holds or shifts by 1 bit position
 // this is a sequential operation, requiring nonblocking (<=) assignments
 // if(...) out <= ...;
 // else if(...) out <= ...;
-//    enable   mode      out  
+//    enable   mode      out
 //      0       0        hold (no change in output)
 //		0       1	     hold
 //		1       1	     load and logical right shift
