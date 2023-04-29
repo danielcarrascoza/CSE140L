@@ -10,7 +10,9 @@ module upcreg(
 
   always_ff @ (posedge clk, posedge reset) begin
 // fill in guts
-//   if(...) upc <= ...; else if(...) upc <= ...; else ... 
+    if(reset) upc <= 0; 
+    else if(load_incr) upc <= upc_next; 
+    else upc <= upc + 1; 
 //   reset    load_incr	    upc
 //     1		1			 0
 //	   1		0            0
