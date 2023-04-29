@@ -31,6 +31,10 @@ module robs_datapath #(parameter WIDTH = 8)
 	// External: signals to control unit and outbus
 	assign product = {a,x};			 // concatenate operator, creates one vector from a followed by x
 // fill in guts
+
+always_comb begin 
+	
+end
 //  always_comb if(...) zr = 1; else zr = 0;
 //  similar treatment for zq;
 //    zr = 1 if r is even
