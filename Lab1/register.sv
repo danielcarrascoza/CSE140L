@@ -10,6 +10,15 @@ module register # (parameter N = 8)
 	 
   always_ff @ (posedge clk, posedge clear)    
     begin
+      if (clear) begin
+        out <=0;
+      end
+      else if (load) begin
+        out <= in;
+      end
+    end
+endmodule
+
       
       
 
@@ -26,7 +35,4 @@ module register # (parameter N = 8)
 	
 // Aside: What would be the impact of leaving posedge clear out of 
 //  the sensitivity list? 
-end	
-		
-endmodule
 
