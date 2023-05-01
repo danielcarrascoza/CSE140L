@@ -6,9 +6,9 @@ module mux3 #(parameter WIDTH = 8)
    output logic[WIDTH-1:0] y);
 
    always@(*) begin
-    if (s[1] = 1)
+    if (s[1] == 1)
       y = d2;
-    else if (s[0] = 1)
+    else if (s[0] == 1)
       y = d1;
     else 
       y = d0;
