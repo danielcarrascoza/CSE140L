@@ -11,19 +11,19 @@ module register_hl # (parameter N = 16)
   input                clear,
   output logic[N-1:0]  out	  	);
 	
-  always_ff @ (posedge clk, posedge clear) begin
+  always_ff @(posedge clk, posedge clear) begin
     if (clear) begin
       out[N-1:N/2] <= 0;
       out[N/2-1:0] <= 0;
     end
     else if (loadl && loadh) begin
       out[N/2-1:0] <= inl;
-      out[N-1:N/2] <= inl;
+      out[N-1:N/2] <= inh;
     end
     else if (loadh) begin
-      out[N-1:N/2] <= inl;
+      out[N-1:N/2] <= inh;
     end
-    else (loadl) begin
+    else if (loadl) begin
       out[N/2-1:0] <= inl;
     end
 //fill in the guts  -- sequential
